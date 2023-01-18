@@ -62,7 +62,11 @@ class studentsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['students'] = DB::table("students")->where("id",$id)->first();
+        return response()->json([
+            "status" => 200,
+            "students" => $data
+        ]);
     }
 
     /**

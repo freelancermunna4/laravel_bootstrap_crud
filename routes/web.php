@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[studentsController::class,'index']);
 Route::post('students/insert',[studentsController::class,'create']);
+Route::get('students/edit/{id?}',[studentsController::class,'edit']);
 Route::get('students/delete/{id?}',[studentsController::class,'destroy']);
